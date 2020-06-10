@@ -7,11 +7,18 @@
     <link href="tutu.png" rel="icon" type="image/x-icon" />
 </head>
 <body>
-        <input type="text" onkeypress='scarry()' placeholder="here">
-       </div>
+        <div id='Test'>What is going to be changed.</div>
+        <button type="button" id='Button' onclick='ChangeMe();'>Button</button>
         <script>
-            function scarry(){
-            alert("wulala");
+            function $(id){
+                return document.getElementById(id);
+
+            }
+            function ChangeMe(){
+                $('Test').style.border="1px red solid";
+                $('Test').innerHTML="New border";
+                $('Button').value="AHA";
+                $('Button').disabled=true;
             }
         </script>
         
